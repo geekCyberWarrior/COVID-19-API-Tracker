@@ -226,7 +226,7 @@ func main() {
 	  return c.JSON(http.StatusOK, u)
 	})
 
-	e.GET("/writeToDB", func(c echo.Context) error {
+	e.POST("/writeToDB", func(c echo.Context) error {
 		err := writeDataToDB()
 		if err != nil {
 			return err
